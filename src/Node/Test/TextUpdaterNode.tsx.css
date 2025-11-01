@@ -1,0 +1,95 @@
+﻿
+.node-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+    width: 120px;
+    position: relative;
+    font-size: 12px;
+}
+.node-header {
+    background-color: #22c55e;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.node-title {
+    font-weight: bold;
+}
+.node-port{
+    position: relative;
+    display: flex;
+    font-size: 8px;
+    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.node-output{
+
+}
+
+.node-contents {
+    border-top: 1px solid #e5e7eb;
+}
+
+.node-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease;
+    gap: 8px;
+}
+
+.node-content:last-child {
+    border-bottom: none;
+}
+
+.node-content:hover {
+    background-color: #f9fafb;
+}
+
+.content-name {
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    color: #1f2937;
+    flex: 0 0 30%;
+    font-size: 13px;
+}
+
+.content-valve {
+    flex: 1 1 65%;
+    padding: 0 20px;
+}
+input.content-valve {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    background: #fff;
+    color: #111827;
+    box-sizing: border-box;
+}
+
+.key-icon {
+    color: #ef4444;
+    margin-right: 4px;
+}
+.node-handle-container{
+    margin: 5px;
+}
+.output{
+    font-size: 8px;
+}
+.node-port-handle{
+    background: #AA00FFFF;
+    position: absolute;
+}
+
