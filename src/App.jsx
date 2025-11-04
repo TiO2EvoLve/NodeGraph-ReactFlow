@@ -4,12 +4,11 @@ import '@xyflow/react/dist/style.css';
 import TextUpdaterNode from "./Node/Test/TextUpdaterNode.tsx";
 import Vector3Node from "./Node/Input/Vector3Node.tsx";
 import OutputNode from "./Node/Output/OutputNode.tsx";
-
 const snapGrid = [25, 25];
 const initialNodes = [
     {
         id: 'n1',
-        type: 'textUpdater',
+        type: 'TextUpdaterNode',
         position: { x: 300, y: 0 },
     },
     {
@@ -23,8 +22,7 @@ const initialNodes = [
         position: { x: 600, y: 0 },
     }
 ]
-const nodeTypes = { textUpdater: TextUpdaterNode,
-Vector3Node: Vector3Node,OutputNode : OutputNode};
+const nodeTypes = { TextUpdaterNode, Vector3Node, OutputNode};
 const initialEdges = [{ id: 'n2-n1', source: 'n2',targetHandle : 'i-base-color', target: 'n1' },{
     id: 'n1-n3',source: 'n1',target: 'n3',targetHandle: 'i-output'}];
 export default function App() {
@@ -61,7 +59,7 @@ export default function App() {
                 snapGrid={snapGrid}//网格大小
             >
                 <MiniMap nodeStrokeWidth={3} zoomable pannable />
-                <Background color="black" lineWidth={0.1} variant='dots' />
+                <Background color="black" lineWidth={0.1} variant='lines' />
                 <Controls />
             </ReactFlow>
         </div>

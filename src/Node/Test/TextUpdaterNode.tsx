@@ -1,6 +1,7 @@
 ﻿import { Handle, Position } from "@xyflow/react";
 
 export default function BSDFNode() {
+    const color = { r: 0, g: 0, b: 0 };
     return (
         <div className="relative w-45 bg-white border border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
             {/* 顶部标题栏 */}
@@ -32,6 +33,7 @@ export default function BSDFNode() {
                     <span className="text-gray-700">基础色</span>
                     <input
                         type="color"
+                        value={`#${((1 << 24) + (color.r << 16) + (color.g << 8) + color.b).toString(16).slice(1)}`}
                         className="w-10 h-5 border border-gray-300 rounded cursor-pointer"
                     />
                 </div>
