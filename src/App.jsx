@@ -3,8 +3,9 @@ import {ReactFlow, applyNodeChanges, applyEdgeChanges, addEdge, MiniMap, Control
 import '@xyflow/react/dist/style.css';
 import TextUpdaterNode from "./Node/Test/TextUpdaterNode.tsx";
 import Vector3Node from "./Node/Input/Vector3Node.tsx";
+import OutputNode from "./Node/Output/OutputNode.tsx";
 
-
+const snapGrid = [25, 25];
 const initialNodes = [
     {
         id: 'n1',
@@ -15,10 +16,17 @@ const initialNodes = [
         id: 'n2',
         type: 'Vector3Node',
         position: { x: 0, y: 0 },
-    }]
+    },
+    {
+        id: 'n3',
+        type: 'OutputNode',
+        position: { x: 600, y: 0 },
+    }
+]
 const nodeTypes = { textUpdater: TextUpdaterNode,
-Vector3Node: Vector3Node};
-const initialEdges = [{ id: 'n2-n1', source: 'n2',targetHandle : 'i-base-color', target: 'n1' }];
+Vector3Node: Vector3Node,OutputNode : OutputNode};
+const initialEdges = [{ id: 'n2-n1', source: 'n2',targetHandle : 'i-base-color', target: 'n1' },{
+    id: 'n1-n3',source: 'n1',target: 'n3',targetHandle: 'i-output'}];
 export default function App() {
     const [nodes, setNodes] = useState(initialNodes);
     const [edges, setEdges] = useState(initialEdges);
@@ -48,7 +56,9 @@ export default function App() {
                 onEdgesChange={onEdgesChange}
                 onConnect={onConnect}
                 fitView
-                style={rfStyle}
+                style={rfStyle}//背景样式
+                snapToGrid={true}//吸附网格
+                snapGrid={snapGrid}//网格大小
             >
                 <MiniMap nodeStrokeWidth={3} zoomable pannable />
                 <Background color="black" lineWidth={0.1} variant='dots' />

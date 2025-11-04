@@ -2,9 +2,9 @@
 
 export default function Vector3Node() {
     return (
-        <div className="relative w-45 bg-white border border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
+        <div className="relative w-30 bg-white border border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
             {/* 顶部标题栏 */}
-            <div className="bg-green-500 text-white text-sm font-semibold px-3 py-1.5 flex justify-between items-center rounded-t-xl">
+            <div className="bg-purple-500 text-white text-sm font-semibold px-3 py-1.5 flex justify-between items-center rounded-t-xl">
                 <span>Vector3</span>
             </div>
 
@@ -15,7 +15,7 @@ export default function Vector3Node() {
                     type="source"
                     id='o-vector3'
                     position={Position.Right}
-                    className="!bg-green-500 !w-3 !h-3 rounded-full absolute right-[-7px] top-1/2 shadow-sm"
+                    className="!bg-purple-500 !w-3 !h-3 rounded-full absolute right-[-7px] top-1/2 shadow-sm"
                 />
             </div>
 
