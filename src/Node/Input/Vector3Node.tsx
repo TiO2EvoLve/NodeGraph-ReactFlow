@@ -11,9 +11,11 @@ export default function Vector3Node() {
             {/* 输出 Handle 一行 */}
             <div className="flex mb-1 mt-1 justify-center items-center px-3 py-2 relative">
                 <span className="text-gray-700 text-[10px] absolute right-1/10" >Vector3</span>
-                <input
-                    defaultValue="0"
-                    className="w-16 text-right border border-gray-300 rounded px-1 py-0.5"
+                <Handle
+                    type="source"
+                    id='o-vector3'
+                    position={Position.Right}
+                    className="!bg-green-500 !w-3 !h-3 rounded-full absolute right-[-7px] top-1/2 shadow-sm"
                 />
             </div>
 
@@ -22,8 +24,8 @@ export default function Vector3Node() {
                 <div className="flex items-center justify-between px-3 py-2 relative">
                     <span className="text-gray-700">X</span>
                     <input
-                        type="color"
-                        className="w-10 h-5 border border-gray-300 rounded cursor-pointer"
+                        defaultValue="0"
+                        className="w-16 text-right border border-gray-300 rounded px-1 py-0.5"
                     />
                 </div>
 

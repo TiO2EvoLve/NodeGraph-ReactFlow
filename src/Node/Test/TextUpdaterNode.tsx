@@ -5,7 +5,7 @@ export default function BSDFNode() {
         <div className="relative w-45 bg-white border border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
             {/* 顶部标题栏 */}
             <div className="bg-green-500 text-white text-sm font-semibold px-3 py-1.5 flex justify-between items-center rounded-t-xl">
-                <span>Vector3</span>
+                <span>BSDF</span>
             </div>
 
             {/* 输出 Handle 一行 */}
@@ -13,7 +13,7 @@ export default function BSDFNode() {
                 <span className="text-gray-700 text-[10px] absolute right-1/10" >BSDF</span>
                 <Handle
                     type="source"
-                    id='o-vector3'
+                    id='o-bsdf'
                     position={Position.Right}
                     className="!bg-green-500 !w-3 !h-3 rounded-full absolute right-[-7px] top-1/2 shadow-sm"
                 />
