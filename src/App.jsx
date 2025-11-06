@@ -32,7 +32,7 @@ const initialNodes = [
 ]
 const nodeTypes = {BSDFNode, Vector3Node, OutputNode};
 const initialEdges = [
-    {id: 'vector3-bsdf', source: 'vector3', targetHandle: 'i-base-color', target: 'bsdf'},
+    {id: 'vector3-bsdf', source: 'vector3', targetHandle: 'i-normal', target: 'bsdf'},
     {id: 'bsdf-output', source: 'bsdf', target: 'output', targetHandle: 'i-output'},
 ];
 export default function App() {

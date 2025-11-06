@@ -48,7 +48,7 @@ export default function BSDFNode({id}: { id: string }) {
                         type="target"
                         id='i-base-color'
                         position={Position.Left}
-                        className="!bg-green-500 !w-3 !h-3 rounded-full absolute left-[-7px] top-1/2 shadow-sm"
+                        className="!bg-orange-500 !w-3 !h-3 rounded-full absolute left-[-7px] top-1/2 shadow-sm"
                     />
                     <span className="text-gray-700">基础色</span>
                     <input
@@ -83,15 +83,11 @@ export default function BSDFNode({id}: { id: string }) {
                 <div className="flex items-center justify-between px-3 py-2 relative">
                     <Handle
                         type="target"
-                        id='i-ior'
+                        id='i-normal'
                         position={Position.Left}
-                        className="!bg-green-500 !w-3 !h-3 rounded-full absolute left-[-7px] top-1/2 shadow-sm"
+                        className="!bg-purple-500 !w-3 !h-3 rounded-full absolute left-[-7px] top-1/2 shadow-sm"
                     />
-                    <span className="text-gray-700">折射率</span>
-                    <input
-                        defaultValue="1.45"
-                        className="w-16 text-right border border-gray-300 rounded px-1 py-0.5"
-                    />
+                    <span className="text-gray-700">法线</span>
                 </div>
             </div>
 
