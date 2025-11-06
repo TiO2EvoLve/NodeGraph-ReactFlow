@@ -1,6 +1,7 @@
 ﻿import { Handle, Position } from "@xyflow/react";
 
 export default function Vector3Node() {
+
     return (
         <div className="relative w-30 bg-white border border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
             {/* 顶部标题栏 */}
@@ -20,7 +21,7 @@ export default function Vector3Node() {
             </div>
 
             {/* 参数部分 */}
-            <div className="divide-y divide-gray-100 text-[10px]">
+            <div className="divide-y divide-gray-100 text-[10px]" >
                 <div className="flex items-center justify-between px-3 py-2 relative">
                     <span className="text-gray-700">X</span>
                     <input
