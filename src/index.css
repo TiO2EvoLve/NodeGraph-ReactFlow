@@ -9,6 +9,7 @@ body {
     width: 100vw;
     height: 100vh;
 }
+/*节点被选中时的样式*/
 .react-flow__node.selectable:focus {
     border: 1px solid #3b82f6;
     box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);

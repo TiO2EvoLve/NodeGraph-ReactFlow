@@ -79,7 +79,7 @@ export default function BSDFNode({id}: { id: string }) {
                     />
                 </div>
 
-                {/* 折射率 IOR */}
+                {/* 法线 */}
                 <div className="flex items-center justify-between px-3 py-2 relative">
                     <Handle
                         type="target"
