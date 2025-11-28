@@ -1,5 +1,6 @@
 ﻿import {Handle, Position, useNodeConnections, useNodesData} from "@xyflow/react";
 import {useEffect} from "react";
+import NodeHeader from "../BaseNode/NodeHeader";
 
 export default function OutputNode() {
 
@@ -14,11 +15,9 @@ export default function OutputNode() {
         console.log('OutputNode color:', sourceNodeData?.data?.value);
     }, [sourceNodeData?.data?.value]);
     return (
-        <div className="relative w-30 bg-white border border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
+        <div className="relative w-30 bg-white border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
             {/* 顶部标题栏 */}
-            <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1.5 flex justify-between items-center rounded-t-xl">
-                <span>Output</span>
-            </div>
+            <NodeHeader title="Output" className="bg-blue-500"/>
             {/* 输出 Handle 一行 */}
             <div className="flex mb-1 mt-1 justify-center items-center px-3 py-2 relative">
                 <span className="text-gray-700 text-[10px] absolute left-1/10" >输出</span>

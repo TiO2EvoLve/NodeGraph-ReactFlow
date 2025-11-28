@@ -1,5 +1,6 @@
 ﻿import {Handle, Position, useNodesData, useReactFlow} from "@xyflow/react";
 import {useCallback, useEffect, useState} from "react";
+import NodeHeader from "../BaseNode/NodeHeader";
 
 export default function BSDFNode({id}: { id: string }) {
 
@@ -22,13 +23,9 @@ export default function BSDFNode({id}: { id: string }) {
     }, [updateNodeData, id]);
 
     return (
-        <div className="relative w-45 bg-white border border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
+        <div className="relative w-45 bg-white border-gray-200 rounded-xl shadow-md font-sans overflow-visible">
             {/* 顶部标题栏 */}
-            <div
-                className="bg-green-500 text-white text-sm font-semibold px-3 py-1.5 flex justify-between items-center rounded-t-xl">
-                <span>BSDF</span>
-            </div>
-
+            <NodeHeader title="BSDF" className="bg-green-500"/>
             {/* 输出 Handle 一行 */}
             <div className="flex mb-1 mt-1 justify-center items-center px-3 py-2 relative">
                 <span className="text-gray-700 text-[10px] absolute right-1/10">BSDF</span>
@@ -70,7 +67,6 @@ export default function BSDFNode({id}: { id: string }) {
                     />
                     <span className="text-gray-700">粗糙度</span>
                     <input
-                        type="range"
                         min="0"
                         max="1"
                         step="0.1"
