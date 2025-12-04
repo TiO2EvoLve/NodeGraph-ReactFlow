@@ -1,6 +1,7 @@
 ﻿import {Handle, Position, useNodesData, useReactFlow} from "@xyflow/react";
 import {useCallback, useEffect, useState} from "react";
 import NodeHeader from "../BaseNode/NodeHeader";
+import OutputHandle from "../BaseNode/OutputHandle";
 
 export default function BSDFNode({id}: { id: string }) {
 
@@ -27,15 +28,7 @@ export default function BSDFNode({id}: { id: string }) {
             {/* 顶部标题栏 */}
             <NodeHeader title="BSDF" className="bg-green-500"/>
             {/* 输出 Handle 一行 */}
-            <div className="flex mb-1 mt-1 justify-center items-center px-3 py-2 relative">
-                <span className="text-gray-700 text-[10px] absolute right-1/10">BSDF</span>
-                <Handle
-                    type="source"
-                    id='o-bsdf'
-                    position={Position.Right}
-                    className="!bg-green-500 !w-3 !h-3 rounded-full absolute right-[-7px] top-1/2 shadow-sm"
-                />
-            </div>
+            <OutputHandle id="o-bsdf" tip="BSDF" className="!bg-green-500"/>
 
             {/* 参数部分 */}
             <div className="divide-y divide-gray-100 text-[10px]">
@@ -71,13 +64,14 @@ export default function BSDFNode({id}: { id: string }) {
                         max="1"
                         step="0.1"
                         defaultValue="0.5"
-                        className="w-20 accent-green-500"
+                        className="w-20 border border-gray-300 rounded px-1 py-0.5 text-right"
                     />
                 </div>
 
                 {/* 法线 */}
                 <div className="flex items-center justify-between px-3 py-2 relative">
                     <Handle
+
                         type="target"
                         id='i-normal'
                         position={Position.Left}

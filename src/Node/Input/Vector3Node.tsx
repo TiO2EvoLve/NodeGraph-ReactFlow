@@ -1,5 +1,6 @@
 ﻿import { Handle, Position } from "@xyflow/react";
 import NodeHeader from "../BaseNode/NodeHeader";
+import OutputHandle from "../BaseNode/OutputHandle";
 
 export default function Vector3Node() {
 
@@ -8,15 +9,7 @@ export default function Vector3Node() {
             {/*顶部标题栏*/}
             <NodeHeader title="Vector3" className="bg-purple-500"/>
             {/* 输出 Handle 一行 */}
-            <div className="flex mb-1 mt-1 justify-center items-center px-3 py-2 relative">
-                <span className="text-gray-700 text-[10px] absolute right-1/10" >Vector3</span>
-                <Handle
-                    type="source"
-                    id='o-vector3'
-                    position={Position.Right}
-                    className="!bg-purple-500 !w-3 !h-3 rounded-full absolute right-[-7px] top-1/2 shadow-sm"
-                />
-            </div>
+            <OutputHandle id="o-vector3" tip="Vector3" className="!bg-purple-500"/>
             {/* 参数部分 */}
             <div className="divide-y divide-gray-100 text-[10px]" >
                 <div className="flex items-center justify-between px-3 py-2 relative">
