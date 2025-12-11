@@ -1,0 +1,57 @@
+import React from 'react';
+
+// 节点分类配置
+const nodeCategories = {
+  Input: [
+    { name: 'Vector1', type: 'Vector1Node', color: 'bg-orange-500' },
+    { name: 'Vector3', type: 'Vector3Node', color: 'bg-purple-500' },
+  ],
+  Output: [
+    { name: 'Output', type: 'OutputNode', color: 'bg-blue-500' },
+    { name: 'Number Output', type: 'NumberOutputNode', color: 'bg-blue-500' },
+  ],
+  Test: [
+    { name: 'BSDF', type: 'BSDFNode', color: 'bg-green-500' },
+  ],
+};
+
+export default function NavBar() {
+  const onDragStart = (event: React.DragEvent, nodeType: string) => {
+    event.dataTransfer.setData('application/reactflow', nodeType);
+    event.dataTransfer.effectAllowed = 'move';
+  };
+
+  return (
+    <div className="h-full bg-gray-50 border-r border-gray-200 overflow-y-auto">
+      <div className="p-4">
+        <h2 className="text-lg font-semibold text-gray-800 mb-4">节点列表</h2>
+        
+        {Object.entries(nodeCategories).map(([category, nodes]) => (
+          <div key={category} className="mb-6">
+            <h3 className="text-sm font-medium text-gray-600 mb-2 px-2 uppercase tracking-wide">
+              {category}
+            </h3>
+            <div className="space-y-2">
+              {nodes.map((node) => (
+                <div
+                  key={node.type}
+                  draggable
+                  onDragStart={(e) => onDragStart(e, node.type)}
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 cursor-grab active:cursor-grabbing hover:shadow-md hover:border-gray-300 transition-all duration-200"
+                >
+                  <div className={`${node.color} text-white text-xs font-semibold px-2 py-1 rounded mb-2 inline-block`}>
+                    {node.name}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {node.type}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+

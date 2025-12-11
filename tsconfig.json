@@ -1,0 +1,15 @@
+﻿{
+  "compilerOptions": {
+    "target": "ESNext",                          // 目标ES版本
+    "module": "ESNext",                          // 模块系统
+    "jsx": "react-jsx",                          // React的JSX编译模式
+    "strict": true,                              // 开启严格模式
+    "esModuleInterop": true,                     // 关键：开启ES模块互操作（解决报错的核心）
+    "allowSyntheticDefaultImports": true,        // 配合esModuleInterop，允许合成默认导入
+    "moduleResolution": "node",                  // 采用Node的模块解析方式
+    "skipLibCheck": true,                        // 跳过库文件的类型检查（可选，提升编译速度）
+    "forceConsistentCasingInFileNames": true     // 强制文件名大小写一致
+  },
+  "include": ["src/**/*"],                       // 要编译的文件范围
+  "exclude": ["node_modules"]                    // 排除的文件范围
+}
