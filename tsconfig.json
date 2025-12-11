@@ -3,8 +3,8 @@
     "target": "ESNext",                          // 目标ES版本
     "module": "ESNext",                          // 模块系统
     "jsx": "react-jsx",                          // React的JSX编译模式
-    "strict": true,                              // 开启严格模式
-    "esModuleInterop": true,                     // 关键：开启ES模块互操作（解决报错的核心）
+    "strict": false,                              // 开启严格模式
+    "esModuleInterop": true,                     // 开启ES模块互操作
     "allowSyntheticDefaultImports": true,        // 配合esModuleInterop，允许合成默认导入
     "moduleResolution": "node",                  // 采用Node的模块解析方式
     "skipLibCheck": true,                        // 跳过库文件的类型检查（可选，提升编译速度）

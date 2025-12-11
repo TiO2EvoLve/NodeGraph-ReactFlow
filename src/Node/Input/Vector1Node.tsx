@@ -1,8 +1,9 @@
-﻿import { Handle, Position } from "@xyflow/react";
-import NodeHeader from "../BaseNode/NodeHeader";
+﻿import NodeHeader from "../BaseNode/NodeHeader";
 import OutputHandle from "../BaseNode/OutputHandle";
 
-export default function Vector3Node() {
+export default function Vector1Node() {
+
+
     return (
         <div className="relative w-30 bg-white border-gray-200 rounded-xl shadow-md font-sans">
             {/*顶部标题栏*/}

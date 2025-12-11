@@ -1,5 +1,4 @@
-﻿import { Handle, Position } from "@xyflow/react";
-import NodeHeader from "../BaseNode/NodeHeader";
+﻿import NodeHeader from "../BaseNode/NodeHeader";
 import OutputHandle from "../BaseNode/OutputHandle";
 
 export default function Vector3Node() {

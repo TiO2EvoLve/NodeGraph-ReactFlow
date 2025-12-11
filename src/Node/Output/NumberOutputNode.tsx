@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import NodeHeader from "../BaseNode/NodeHeader";
 
 
-export default function NumberOutputNode() {
+export function NumberOutputNode() {
     // 找出这个节点左侧输入口的连接
     const connections = useNodeConnections({
         handleType: "target",
@@ -20,7 +20,7 @@ export default function NumberOutputNode() {
             <NodeHeader title="Number Output" className="bg-blue-500"/>
             {/* 输出 Handle 一行 */}
             <div className="flex mb-1 mt-1 justify-center items-center px-3 py-2 relative">
-                <span className="text-gray-700 text-[10px] absolute left-1/10" >输出</span>
+                <span className="text-gray-700 text-[10px] absolute left-1/10">输出</span>
                 <Handle
                     type="target"
                     id='i-number'
@@ -29,7 +29,7 @@ export default function NumberOutputNode() {
                 />
             </div>
             <div>
-                <span>ww</span>
+                <span  content={`${sourceNodeData?.data?.value}`}></span>
             </div>
         </div>
     );
