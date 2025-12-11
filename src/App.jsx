@@ -134,6 +134,7 @@ export default function App() {
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
           fitView
+          snapToGrid//吸附网格
           deleteKeyCode={['Delete', 'Backspace']}
           style={rfStyle}
           autoPanOnNodeFocus={true}
