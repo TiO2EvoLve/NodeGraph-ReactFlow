@@ -11,6 +11,7 @@ export default function NumberOutputNode() {
     // 拿到连接的源节点数据（即前一个节点）
     const sourceNodeData = useNodesData(connections?.[0]?.source);
     useEffect(() => {
+        console.log("Number Output Node received value:", sourceNodeData?.data?.value);
     }, [sourceNodeData?.data?.value]);
 
     return (

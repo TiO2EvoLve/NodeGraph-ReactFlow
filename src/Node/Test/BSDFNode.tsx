@@ -2,6 +2,7 @@
 import {useCallback, useEffect, useState} from "react";
 import NodeHeader from "../BaseNode/NodeHeader";
 import OutputHandle from "../BaseNode/OutputHandle";
+import InputHandle from "../BaseNode/InputHandle";
 
 export default function BSDFNode({id}: { id: string }) {
 
@@ -34,12 +35,8 @@ export default function BSDFNode({id}: { id: string }) {
             <div className="divide-y divide-gray-100 text-[10px]">
                 {/* 基础色 */}
                 <div className="flex items-center justify-between px-3 py-2 relative">
-                    <Handle
-                        type="target"
-                        id='i-base-color'
-                        position={Position.Left}
-                        className="!bg-orange-500 !w-3 !h-3 rounded-full absolute left-[-7px] top-1/2 shadow-sm"
-                    />
+                    {/*输入接口*/}
+                    <InputHandle id="i-base-color" className="!bg-orange-500"/>
                     <span className="text-gray-700">基础色</span>
                     <input
                         type="color"
@@ -52,12 +49,8 @@ export default function BSDFNode({id}: { id: string }) {
 
                 {/* 粗糙度 */}
                 <div className="flex items-center justify-between px-3 py-2 relative">
-                    <Handle
-                        type="target"
-                        id='i-roughness'
-                        position={Position.Left}
-                        className="!bg-green-500 !w-3 !h-3 rounded-full absolute left-[-7px] top-1/2 shadow-sm"
-                    />
+                    {/*输入接口*/}
+                    <InputHandle id="i-roughness" className="!bg-green-500"/>
                     <span className="text-gray-700">粗糙度</span>
                     <input
                         min="0"
@@ -70,13 +63,8 @@ export default function BSDFNode({id}: { id: string }) {
 
                 {/* 法线 */}
                 <div className="flex items-center justify-between px-3 py-2 relative">
-                    <Handle
-
-                        type="target"
-                        id='i-normal'
-                        position={Position.Left}
-                        className="!bg-purple-500 !w-3 !h-3 rounded-full absolute left-[-7px] top-1/2 shadow-sm"
-                    />
+                    {/*输入接口*/}
+                    <InputHandle id="i-normal" className="!bg-purple-500"/>
                     <span className="text-gray-700">法线</span>
                 </div>
             </div>
